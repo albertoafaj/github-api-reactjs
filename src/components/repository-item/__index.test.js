@@ -4,9 +4,9 @@ import ReposItem from './index'
 
 describe('Profile', ()=>{
   test('should render a repositeries and starred', () => {
-    render(<ReposItem />);
+    render(<ReposItem name={undefined} linkToRepo={undefined} fullName={undefined} />);
 
-    const reposEl = screen.getByText(/full name:/i);
+    const reposEl = screen.getByText(/^full name:$/i);
     expect(reposEl ).toBeInTheDocument() 
 
   });
