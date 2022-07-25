@@ -1,50 +1,66 @@
 import React from 'react';
+import useGithub from '../../hooks/githubHooks';
 import * as S from './styled';
 
 function Profile() {
+
+    const {githubState} = useGithub();
+
     return (
         <S.Wrapper>
             <>
-                <S.WrapperImg src="https://avatars.githubusercontent.com/u/45070086?v=4" alt="User picture" />
+                <S.WrapperImg 
+                    src={githubState.user.avatar} 
+                    alt="User picture" />
                 <S.Wrapper>
 
                     <S.WrapperInfoUser>
                         <div>
-                            <h1>Alberto Araújo Jr</h1>
-                            <S.WrapperUserName>
+                            <h1>{githubState.user.name}</h1>
+                            <S.WrapperUserGeneric>
                                 <h3>Username:</h3>
-                                <a href='https://api.github.com/users/albertoafaj' target="_black" rel='noreferrer'>albertoafaj</a>
-                            </S.WrapperUserName>
-                            <S.WrapperUserName>
+                                <a 
+                                href={githubState.user.html_URL}
+                                target="_black" 
+                                rel='noreferrer'>
+                                    {githubState.user.login}
+                                </a>
+                            </S.WrapperUserGeneric>
+                            <S.WrapperUserGeneric>
                                 <h3>Company:</h3>
-                                <a href='https://api.github.com/users/albertoafaj' target="_black" rel='noreferrer'>N/A</a>
-                            </S.WrapperUserName>
-                            <S.WrapperUserName>
+                                <span>{githubState.user.company} </span> 
+                            </S.WrapperUserGeneric>
+                            <S.WrapperUserGeneric>
                                 <h3>Location:</h3>
-                                <a href='https://api.github.com/users/albertoafaj' target="_black" rel='noreferrer'>Camaçari/BA</a>
-                            </S.WrapperUserName>
-                            <S.WrapperUserName>
+                                <span>{githubState.user.location}</span>
+                            </S.WrapperUserGeneric>
+                            <S.WrapperUserGeneric>
                                 <h3>Blog:</h3>
-                                <a href='https://www.linkedin.com/in/alberto-araújo-996a01186/' target="_black" rel='noreferrer'>Https://...</a>
-                            </S.WrapperUserName>
+                                <a 
+                                href={githubState.user.blog}
+                                target="_black" 
+                                rel='noreferrer'>
+                                    {githubState.user.blog} 
+                                </a>
+                            </S.WrapperUserGeneric>
                             
                         </div>
                     <S.WrapperStatusCount>
                         <div>
                             <h4>Followers</h4>
-                            <span>5</span>
+                            <span>{githubState.user.followers} </span>
                         </div>
                         <div>
                             <h4>Followings</h4>
-                            <span>5</span>
+                            <span>{githubState.user.following} </span>
                         </div>
                         <div>
-                            <h4>Gits</h4>
-                            <span>5</span>
+                            <h4>Gists</h4>
+                            <span>{githubState.user.public_gists} </span>
                         </div>
                         <div>
                             <h4>Repos</h4>
-                            <span>5</span>
+                            <span>{githubState.user.public_repos}</span>
                         </div>
                     </S.WrapperStatusCount>
                     </S.WrapperInfoUser>

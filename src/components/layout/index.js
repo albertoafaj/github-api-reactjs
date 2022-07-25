@@ -1,15 +1,15 @@
 import React from 'react'
+import useGithub from '../../hooks/githubHooks'
+import Header from '../header/Header'
 import * as S from './styled'
+
 
 function Layout({ children }) {
     return (
         <>
             <S.WrapperLayout>
-                <header>
-                    <input type="text" placeholder='Digite o username para pesquisa...' />
-                    <button>Buscar</button>
-                </header>
-                {children}
+                <Header />  
+                {githubState.loading ? <p>Loading</p> : <> {children}</>}
             </S.WrapperLayout>
         </>
     )
