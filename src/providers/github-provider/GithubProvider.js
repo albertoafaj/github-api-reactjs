@@ -77,7 +77,6 @@ const GithubProvider = ({ children }) => {
 
   const getUserStarred = (username) => {
     api.get(`users/${username}/starred`).then(({ data }) => {
-      console.log("data: " + JSON.stringify(data));
       setGithubState((prevState) => ({
         ...prevState,
         starred: data,

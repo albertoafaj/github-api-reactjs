@@ -7,15 +7,17 @@ export const Wrapper = styled.div`
     padding: 4px;
 
     input {
-        border: 1px solid #ccc;
-        width: 100%;
-        height: 44px;
-        padding: 4px;
-    }
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 100%;
+    height: 44px;
+    padding: 8px;
+    font-weight: 500;
+  }
     
     button {
         background-color: #225ed8;
-        padding: 8 px 16px;
+        padding: 8px 16px;
         margin: 0 16px;
         border-radius: 8px;
         font-weight: bold;

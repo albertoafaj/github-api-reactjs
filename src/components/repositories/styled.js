@@ -12,6 +12,10 @@ export const WrapperTabList = styled(TabList)`
   padding: 4px;
   display: flex;
   margin: 0;
+  @media (max-width: 576px) {  
+      justify-content: space-evenly;
+    }
+
 `;
 WrapperTabList.tabsRole = "TabList";
 
@@ -54,3 +58,4 @@ export const WrapperList = styled.div`
   justify-content: flex-start;
   flex-wrap: wrap;
 `;
+

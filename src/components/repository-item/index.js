@@ -1,12 +1,19 @@
 import React from 'react'
+import * as S from './styled'
 
-function ReposItem({name, linkToRepo, fullName}) {
+function ReposItem({ name, linkToRepo, fullName }) {
   return (
-    <div>
-        <h2>{name}</h2>
-        <h4>Full name:</h4>
-        <a href={linkToRepo} target="_black" rel="noreferrer">{fullName}</a>
-    </div>
+    <S.Wrapper>
+      <div>
+        <S.WrapperTitle>{name}</S.WrapperTitle>
+        <S.WrapperFullName>Full name:</S.WrapperFullName>
+        <S.WrapperLink 
+          href={linkToRepo} 
+          target="_black" 
+          rel="noreferrer">{fullName}
+        </S.WrapperLink>
+      </div>
+    </S.Wrapper>
   )
 }
 
