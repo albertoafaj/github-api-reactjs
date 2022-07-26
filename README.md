@@ -8,9 +8,9 @@ Desenvolvido como parte do curso de Front-end: Desenvolvimento Web com React da 
 
 ## :hammer: Funcionalidades do projeto
 
- `Funcionalidade 1`: Pesquisar as informações pessoais dos usuários;
- `Funcionalidade 2`: Listar os repositórios criados por ele;
- `Funcionalidade 3`: Listar quais repositórios foram marcados com estrela;
+* `Funcionalidade 1`: Pesquisar as informações pessoais dos usuários;
+* `Funcionalidade 2`: Listar os repositórios criados por ele;
+* `Funcionalidade 3`: Listar quais repositórios foram marcados com estrela;
 
 
 ## Demo:
